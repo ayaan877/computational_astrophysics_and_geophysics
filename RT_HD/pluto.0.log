@@ -1,0 +1,203 @@
+
+   ___  __   __  ____________   
+  / _ \/ /  / / / /_  __/ __ \ 
+ / ___/ /__/ /_/ / / / / /_/ /  
+/_/  /____/\____/ /_/  \____/   
+=============================    v. 4.4-patch3 (Sep 2024)  
+
+> System:
+
+  USER:             unknown
+  SYSTEM_NAME:      Linux
+  NODE_NAME:        Ayaan-Asus-Vivobook
+  ARCH:             x86_64
+  BYTE_ORDER:       little
+
+  - Basic data type size (Bytes):
+    o sizeof (char)     = 1
+    o sizeof (uchar)    = 1
+    o sizeof (uint16_t) = 2
+    o sizeof (short)    = 2
+    o sizeof (ushort)   = 2
+    o sizeof (int)      = 4
+    o sizeof (long)     = 8
+    o sizeof (*int)     = 8
+    o sizeof (float)    = 4
+    o sizeof (double)   = 8
+    o sizeof (*double)  = 8
+
+  - Structure data type (Bytes):
+    o sizeof (cmdLine)    = 64
+    o sizeof (Data)       = 272
+    o sizeof (Grid)       = 1024
+    o sizeof (Float_Vect) = 12
+    o sizeof (Image)      = 856
+    o sizeof (Output)     = 1768
+    o sizeof (RGB)        = 3
+    o sizeof (Runtime)    = 47008
+    o sizeof (Restart)    = 128
+    o sizeof (timeStep)   = 144
+    o sizeof (RBox)       = 112
+    o sizeof (State)      = 128
+    o sizeof (Sweep)      = 568
+
+> Local time:       Wed Nov  5 17:43:15 2025
+
+> Cmd line args:    
+
+> Header configuration:
+
+  PHYSICS:          HD
+  DIMENSIONS:       2
+  GEOMETRY:         Cartesian
+  BODY_FORCE:       EXPLICIT
+  RECONSTRUCTION:   Linear  (Primitive lim)
+  TIME STEPPING:    Hancock [Primitive]
+  TRACERS:          0
+  VARIABLES:        5
+  ENTROPY_SWITCH:   NO
+  LOADED MODULES:
+
+  ROTATION:         NO
+  EOS:              Ideal
+
+> Runtime configuration (pluto.ini):
+
+  +----------------------------------------------------------
+  | [Grid]
+  | 
+  | X1-grid  1   -0.5   256   u    0.5
+  | X2-grid  1   -1.0   512   u    1.0
+  | X3-grid  1   -0.5    1   u    0.5
+  | 
+  | [Chombo Refinement]
+  |  
+  | Levels           4
+  | Ref_ratio        2 2 2 2 2 2
+  | Regrid_interval  2 2 2 2 2
+  | Refine_thresh    0.5
+  | Tag_buffer_size  2
+  | Block_factor     8
+  | Max_grid_size    16
+  | Fill_ratio       0.9
+  |  
+  | [Time]
+  | 
+  | CFL            0.8
+  | CFL_max_var    1.1
+  | tstop          15.0
+  | first_dt       1.e-3
+  | 
+  | [Solver]
+  | 
+  | Solver        roe
+  | 
+  | [Boundary]
+  | 
+  | X1-beg    periodic
+  | X1-end    periodic
+  | X2-beg    reflective
+  | X2-end    reflective
+  | X3-beg    periodic
+  | X3-end    periodic
+  | 
+  | [Static Grid Output]
+  | 
+  | uservar    0
+  | dbl        1.0  -1   multiple_files
+  | dbl.h5    -30.0  -1 
+  | flt       -1.0  -1   single_file
+  | flt.h5     15.0  -1
+  | vtk       -0.5  -1   multiple_files
+  | tab       -1.0  -1   
+  | ppm       -1.0  -1   
+  | png       -1.0  -1   
+  | log        10 
+  | analysis  -1.0  -1 
+  |  
+  | [Chombo HDF5 output]
+  |  
+  | Checkpoint_interval   1.0  -1
+  | Plot_interval         1.0  -1
+  |  
+  | [Parameters]
+  | 
+  | ETA                         2.0  
+  | GRAV                        -0.1  
+  | CHI                         0.0  
+  +---------------------------------------------------------
+
+> Generating grid...
+
+  Global grid:
+  X1: [  -0.5000,   0.5000],    256 point(s), 2 ghosts
+  X2: [  -1.0000,   1.0000],    512 point(s), 2 ghosts
+
+  Local grid:
+  X1: [  -0.5000,   0.5000],    256 point(s); 2 ghosts; Active zones = [2, 257]
+  X2: [  -1.0000,   1.0000],    512 point(s); 2 ghosts; Active zones = [2, 513]
+
+> Memory allocation
+> Assigning initial conditions (Startup) ...
+> Normalization Units:
+
+  [Density]:      1.673e-24 (gr/cm^3), 1.000e+00 (1/cm^3)
+  [Pressure]:     1.673e-14 (dyne/cm^2)
+  [Velocity]:     1.000e+05 (cm/s)
+  [Length]:       1.496e+13 (cm)
+  [Temperature]:  1.203e+02 X (p/rho*mu) (K)
+  [Time]:         1.496e+08 (sec), 4.744e+00 (yrs) 
+ 
+> Number of processors: 1
+> Proc size:            256 X 512
+> Parallel Directions:  X1/X2
+> Writing file #0 (dbl) to disk...
+  [ 0.00 sec ]
+> Writing file #0 (flt.h5) to disk...
+! WriteData: HDF5 library not available
+> Starting computation... 
+
+step:0; t = 0.0000e+00; dt = 1.0000e-03; 0.0 %
+        [Mach = 0.028262]
+step:10; t = 1.5937e-02; dt = 2.5937e-03; 0.1 %
+         [Mach = 0.027300]
+step:20; t = 4.4533e-02; dt = 2.8936e-03; 0.3 %
+         [Mach = 0.021816]
+step:30; t = 7.3468e-02; dt = 2.8936e-03; 0.5 %
+         [Mach = 0.016259]
+step:40; t = 1.0240e-01; dt = 2.8936e-03; 0.7 %
+         [Mach = 0.014635]
+step:50; t = 1.3134e-01; dt = 2.8936e-03; 0.9 %
+         [Mach = 0.014403]
+step:60; t = 1.6027e-01; dt = 2.8936e-03; 1.1 %
+         [Mach = 0.014312]
+step:70; t = 1.8921e-01; dt = 2.8936e-03; 1.3 %
+         [Mach = 0.014217]
+step:80; t = 2.1815e-01; dt = 2.8936e-03; 1.5 %
+         [Mach = 0.014121]
+step:90; t = 2.4708e-01; dt = 2.8936e-03; 1.6 %
+         [Mach = 0.014028]
+step:100; t = 2.7602e-01; dt = 2.8936e-03; 1.8 %
+          [Mach = 0.013938]
+step:110; t = 3.0495e-01; dt = 2.8936e-03; 2.0 %
+          [Mach = 0.013858]
+step:120; t = 3.3389e-01; dt = 2.8936e-03; 2.2 %
+          [Mach = 0.013782]
+step:130; t = 3.6282e-01; dt = 2.8936e-03; 2.4 %
+          [Mach = 0.013706]
+step:140; t = 3.9176e-01; dt = 2.8936e-03; 2.6 %
+          [Mach = 0.013633]
+step:150; t = 4.2069e-01; dt = 2.8936e-03; 2.8 %
+          [Mach = 0.013561]
+step:160; t = 4.4963e-01; dt = 2.8936e-03; 3.0 %
+          [Mach = 0.013490]
+step:170; t = 4.7857e-01; dt = 2.8936e-03; 3.2 %
+          [Mach = 0.013421]
+step:180; t = 5.0750e-01; dt = 2.8936e-03; 3.4 %
+          [Mach = 0.013362]
+step:190; t = 5.3644e-01; dt = 2.8936e-03; 3.6 %
+          [Mach = 0.013307]
+step:200; t = 5.6537e-01; dt = 2.8936e-03; 3.8 %
+          [Mach = 0.013253]
+step:210; t = 5.9431e-01; dt = 2.8936e-03; 4.0 %
+          [Mach = 0.013202]

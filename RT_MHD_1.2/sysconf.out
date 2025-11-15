@@ -1,0 +1,12 @@
+USER           = unknown
+WORKING_DIR    = /home/ayaan_dutt/pluto/Test_Problems/MHD/Rayleigh_Taylor/RT_MHD_1.2
+SYSTEM_NAME    = Linux
+NODE_NAME      = Ayaan-Asus-Vivobook
+RELEASE        = 6.6.87.2-microsoft-standard-WSL2
+ARCH           = x86_64
+BYTE_ORDER     = little
+VERSION        = #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+PLUTO_DIR      = /home/ayaan_dutt/pluto
+PLUTO_VERSION  = 2024)"
+C_COMPILER     = gcc
+MPI_C_COMPILER = mpicc
